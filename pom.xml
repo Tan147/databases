@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--
+         Комментарии
+         Система сборки (idea, maven, gradle) позволяет:
+         1. Описывать проект, указывая его идентификатор, название, версию java.
+         (см. теги groupId, artifactId, version, properties, name, description).
+         2. Добавлять в проект необходимые библиотеки (см. тег dependencies).
+         3. Добавлять плагины, которые позволяют генерировать документацию,
+         компилировать файлы, запускать тесты, собирать проект (см. теги packaging, build).
+       -->
+
+    <!-- 1. GAV - обязательная информация -->
+    <groupId>ru.itmo</groupId>
+    <artifactId>databases</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <!-- SNAPSHOT - версия находится в разработке -->
+
+    <!-- 2. Необязательная информация -->
+    <name>Работа с БД</name>
+    <description>Основы работы с Базами Данных</description>
+
+    <!-- 3. Результат сборки-->
+    <packaging>jar</packaging>
+    <!-- jar по умолчанию -->
+    <!-- pom - родитель в модульной сборке -->
+    <!-- war - для web приложений -->
+    <!-- ear - для enterprise приложений -->
+
+    <!-- 4. Настройки проекта -->
+    <properties>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <!-- 5. зависимости проекта -->
+    <!-- все зависимости -->
+    <dependencies>
+        <!-- библиотека используется для написания тестов -->
+        <dependency>
+            <!-- уникальной идентификатор разработчика (указывается обязательно)  -->
+            <groupId>org.junit.jupiter</groupId>
+            <!-- уникальной идентификатор библиотеки в рамках groupId (указывается обязательно)  -->
+            <artifactId>junit-jupiter-engine</artifactId>
+            <!--
+              версия библиотеки:
+                 - если не указана, будет загружаться последняя версия;
+                 - если указана со SNAPSHOT, то всегда будет загружаться из удаленного репозитория
+              -->
+        <version>5.10.1</version>
+        <!--
+          Область видимости зависимости:
+             - compile - используется по умолчанию. Доступна во время выполнения, тестирования, сборки;
+             - test - доступна только при тестировании;
+             - runtime - используется по время выполнения / тестирования. Не будет доступна на этапе сборки.
+             Нет прямого доступа к классам библиотеки через import;
+             - provided - аналогично compile, но не попадет в сборку;
+             - import - для модульной сборки
+             - system - зависимость загружается с компьютера,
+             указывается совместно с тегом <systemPath>путь к библиотеке</systemPath>
+          -->
+        <scope>test</scope>
+    </dependency>
+
+        <!-- библиотека используется для написания тестов -->
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <version>5.8.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- библиотека используется для работы с БД -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.7.3</version>
+            <scope>runtime</scope>
+        </dependency>
+
+
+        <!-- библиотека - пул соединений для подключения к серверу БД -->
+        <dependency>
+            <groupId>com.mchange</groupId>
+            <artifactId>c3p0</artifactId>
+            <version>0.9.5.5</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.32</version>
+            <scope>provided</scope>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+    <!-- имя файла, который будет создан в результате сборки -->
+    <finalName>dbs</finalName>
+    <!-- список плагинов -->
+    <plugins>
+    <!-- плагин для генерации исполняемого jar файла с зависимостями -->
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>3.2.3</version>
+        <!-- привязка плагинов к фазам сборки -->
+        <executions>
+            <!--
+               к фазе package привязывается функция плагина
+               с названием shade - генерация jar файла с зависимостями
+              -->
+            <execution>
+                <phase>package</phase>
+                <goals>
+                    <goal>shade</goal>
+                </goals>
+            </execution>
+        </executions>
+        <!-- настройки плагина -->
+        <configuration>
+            <!-- jar файл будет исполняемым -->
+            <transformers>
+                <transformer
+                        implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                    <mainClass>com.lessons.maven.MavenLesson</mainClass>
+                </transformer>
+            </transformers>
+        </configuration>
+    </plugin>
+
+        <!-- генерация документации -->
+        <!-- <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <version>3.2.0</version>
+            <configuration>
+                <show>private</show>
+            </configuration>
+            <executions>
+                <execution>
+                    <phase>package</phase>
+                    <goals>
+                        <goal>aggregate</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin> -->
+
+        <!-- генерация сайта проекта -->
+        <!-- <plugin>
+             <groupId>org.apache.maven.plugins</groupId>
+             <artifactId>maven-site-plugin</artifactId>
+             <version>3.9.1</version>
+             <configuration>
+                 <locales>en,ru,fr</locales>
+             </configuration>
+         </plugin> -->
+
+    </plugins>
+
+    </build>
+
+
+</project>
