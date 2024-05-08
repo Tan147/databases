@@ -1,5 +1,8 @@
 package ru.itmo.databases;
 
+import ru.itmo.databases.Author;
+import ru.itmo.databases.C3P0Pool;
+
 import java.sql.*;
 import java.time.LocalDate;
 import java.util.List;
@@ -151,6 +154,17 @@ public class AuthorDao {
             throw new RuntimeException(e);
         }
     }
+
+
+    public List<Author> authorsWithoutNotes(){
+        String selectSqlLeftJoin = "SELECT id, unique_name, registered_at " +
+                "FROM tb_authors " +
+                "LEFT JOIN tb_notes " +
+                "ON tb_authors.id = tb_notes.author_id " +
+                "WHERE tb_notes.author_id IS NULL"; //получим тех, у кого нет заметок, это из результатирующей таблицы
+        return null;
+    }
+    // и трай подключение здесь д.б.
 
 
 
