@@ -1,7 +1,7 @@
-package ru.itmo.databases;
+package ru.itmo.databases.jdbc.dao;
 
-import ru.itmo.databases.Author;
 import ru.itmo.databases.C3P0Pool;
+import ru.itmo.databases.jdbc.model.Author;
 
 import java.sql.*;
 import java.time.LocalDate;

@@ -5,9 +5,9 @@
              version="2.0">
 
     <persistence-unit name="competitions" transaction-type="RESOURCE_LOCAL">
-        <class>ru.itmo.databases.jpa.Student</class>
-        <class>ru.itmo.databases.jpa.Competition</class>
-        <class>ru.itmo.databases.jpa.Comment</class>
+        <class>ru.itmo.databases.jpa.model.Student</class>
+        <class>ru.itmo.databases.jpa.model.Competition</class>
+        <class>ru.itmo.databases.jpa.model.Comment</class>
 
 
 

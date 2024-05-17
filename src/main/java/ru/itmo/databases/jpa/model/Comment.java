@@ -1,17 +1,21 @@
-package ru.itmo.databases.jpa;
+package ru.itmo.databases.jpa.model;
 
 import jakarta.persistence.*;
+import lombok.Data;
+import lombok.NonNull;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
+@Data
 @Entity
 @Table(name = "tb_comments")
 public class Comment {
     @Id
     private long id;
+
     @Column(nullable = false)
     private String text;
+
     @Column(name = "created_at", nullable = false, updatable = false)
     private final LocalDateTime createdAt;
 
@@ -22,9 +26,12 @@ public class Comment {
     @JoinColumn(name = "competition_id", nullable = false)
     private Competition competition;
 
+    @NonNull
+    @ManyToOne
+    @JoinColumn(name = "student_id", nullable = false)
     private Student student;
 
-   public Comment() {
+    public Comment() {
         createdAt = LocalDateTime.now();
     }
 

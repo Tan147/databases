@@ -1,8 +1,6 @@
 package ru.itmo.databases;
 
-import java.util.ArrayList;
-import java.util.List;
-
+/*
 public class Ex {
 }
 
@@ -24,3 +22,5 @@ class Comment {
     private int id;
 
 }
+
+ */

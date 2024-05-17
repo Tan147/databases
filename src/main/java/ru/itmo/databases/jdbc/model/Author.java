@@ -1,4 +1,4 @@
-package ru.itmo.databases;
+package ru.itmo.databases.jdbc.model;
 
 import lombok.Getter;
 import lombok.Setter;
