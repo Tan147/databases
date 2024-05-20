@@ -4,11 +4,13 @@
              xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
              version="2.0">
 
-    <persistence-unit name="competitions" transaction-type="RESOURCE_LOCAL">
-        <class>ru.itmo.databases.jpa.model.Student</class>
-        <class>ru.itmo.databases.jpa.model.Competition</class>
-        <class>ru.itmo.databases.jpa.model.Comment</class>
-
+    <persistence-unit name="climb" transaction-type="RESOURCE_LOCAL">
+        <class>ru.itmo.databases.kurs04.model.Climber</class>
+        <class>ru.itmo.databases.kurs04.model.CompletedMountainClimb</class>
+        <class>ru.itmo.databases.kurs04.model.Country</class>
+        <class>ru.itmo.databases.kurs04.model.Group</class>
+        <class>ru.itmo.databases.kurs04.model.Mountain</class>
+        <class>ru.itmo.databases.kurs04.model.Reserve</class>
 
 
         <properties>

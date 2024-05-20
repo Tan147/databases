@@ -14,7 +14,7 @@ public class Main {
     public static void main(String[] args) {
 
         EntityManagerFactory factory = Persistence
-                .createEntityManagerFactory("competitions");
+                .createEntityManagerFactory("climb");
         EntityManager manager = factory.createEntityManager();
 
         Country country01 = new Country(1, "Russia");
