@@ -5,31 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9aef7cb1-095d-4667-a829-edb0677af4c9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/jpa/dao/CompetitionDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/jpa/dao/Dao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/jpa/model/PlaceNumber.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/jpa/model/Prize.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/jpa/model/StudentCompetition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/jpa/model/StudentCompetitionKey.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/unit/Dao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/unit/Service.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/unit/TestException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/itmo/databases/unit/DaoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/itmo/databases/unit/ServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/jpa/examples/CompositeKeysExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/jpa/examples/JpaInheritanceExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/kurs04/dao/ClimberDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/kurs04/dao/CompletedMountainClimbDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/kurs04/dao/CountryDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/kurs04/dao/Dao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/kurs04/dao/GroupDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/kurs04/dao/MountainDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/kurs04/dao/ReserveDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/kurs04/model/Climber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/kurs04/model/CompletedMountainClimb.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/kurs04/model/Country.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/kurs04/model/Group.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/kurs04/model/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/kurs04/model/Mountain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/kurs04/model/Reserve.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/jdbc/model/Author.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/AuthorDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/jdbc/dao/AuthorDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/Databases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/jdbc/Databases.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/Ex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/Example.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/Note.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/jdbc/model/Note.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/NotesDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/jdbc/dao/NotesDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/jpa/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/jpa/model/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/jpa/Competition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/jpa/model/Competition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/jpa/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/jpa/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/jpa/Prize.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/jpa/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/jpa/model/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/jpa/dao/CompetitionDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/jpa/dao/CompetitionDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/jpa/model/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/jpa/model/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/jpa/model/Competition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itmo/databases/jpa/model/Competition.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +59,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Tatyana/IdeaProjects/databases/src/main/java/ru/itmo/databases/unit",
+    "last_opened_file_path": "C:/Users/Tatyana/IdeaProjects/databases/src/main/java/ru/itmo/databases/jpa/examples",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -73,11 +68,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Tatyana\IdeaProjects\databases\src\main\java\ru\itmo\databases\jpa\examples" />
       <recent name="C:\Users\Tatyana\IdeaProjects\databases\src\main\java\ru\itmo\databases\unit" />
       <recent name="C:\Users\Tatyana\IdeaProjects\databases\src\main\java\ru\itmo\databases\jpa" />
       <recent name="C:\Users\Tatyana\IdeaProjects\databases\src\main\java\ru\itmo\databases\jpa\dao" />
       <recent name="C:\Users\Tatyana\IdeaProjects\databases\src\main\resources\META-INF" />
-      <recent name="C:\Users\Tatyana\IdeaProjects\databases\src\main\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Tatyana\IdeaProjects\databases" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
